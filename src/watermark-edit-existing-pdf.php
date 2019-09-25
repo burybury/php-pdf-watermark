@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL &~ E_DEPRECATED);
+error_reporting(E_ALL &~ E_NOTICE &~ E_DEPRECATED);
 error_reporting(E_ALL & ~E_USER_DEPRECATED);
 //                      ^ this one
 trigger_error('Deprecated', E_USER_DEPRECATED);
