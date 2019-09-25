@@ -7,7 +7,7 @@ require(dirname(__DIR__ ) . '/vendor/WatermarkPDF/WatermarkPDF.php');
 $pdfFile = dirname(__DIR__ ) . "/chinmay235.pdf";
 $pdf14 = $pdfFile."v14.pdf";
 
-shell_exec( "ghostscript -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=".$pdfFile." ".$pdf14."");
+shell_exec( "ghostscript -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=".$pdf14." ".$pdfFile."");
 
 $watermarkText = "Chinmay Kumar Sahu";
 $pdf = new WatermarkPDF($pdf14, $watermarkText);
