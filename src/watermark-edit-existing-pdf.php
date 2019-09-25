@@ -5,7 +5,7 @@
 require(dirname(__DIR__ ) . '/vendor/WatermarkPDF/WatermarkPDF.php');
 # ==========================
 $pdfFile = dirname(__DIR__ ) . "/chinmay235.pdf";
-$pdf14 = dirname(__DIR__ ) . $pdfFile."v14.pdf";
+$pdf14 = $pdfFile."v14.pdf";
 
 shell_exec( "ghostscript -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=".$pdfFile." ".$pdf14."");
 
