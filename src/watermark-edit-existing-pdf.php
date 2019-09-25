@@ -1,6 +1,8 @@
 <?php
 
-
+error_reporting(E_ALL & ~E_USER_DEPRECATED);
+//                      ^ this one
+trigger_error('Deprecated', E_USER_DEPRECATED);
 //This page contains edit the existing file by using fpdi.
 require(dirname(__DIR__ ) . '/vendor/WatermarkPDF/WatermarkPDF.php');
 # ==========================
