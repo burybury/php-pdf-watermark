@@ -1,10 +1,16 @@
 <?php
+
+
 //This page contains edit the existing file by using fpdi.
 require(dirname(__DIR__ ) . '/vendor/WatermarkPDF/WatermarkPDF.php');
 # ==========================
 $pdfFile = dirname(__DIR__ ) . "/chinmay235.pdf";
+$pdf14 = dirname(__DIR__ ) . $pdfFile."v14.pdf";
+
+shell_exec( "ghostscript -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=".$pdfFile." ".$pdf14."");
+
 $watermarkText = "Chinmay Kumar Sahu";
-$pdf = new WatermarkPDF($pdfFile, $watermarkText);
+$pdf = new WatermarkPDF($pdf14, $watermarkText);
 //$pdf = new FPDI();
 $pdf->AddPage();
 $pdf->SetFont('Arial', '', 12);
