@@ -4,7 +4,7 @@ require_once(dirname(__DIR__) .'/setasign/FPDI/src/autoload.php');
 require_once dirname(__DIR__) .'/setasign/FPDI/Fpdi.php';
 
 
-class WatermarkPDF extends FPDI {
+class WatermarkPDF extends setasign\Fpdi\FPDI {
 
     public $_tplIdx;
     public $angle = 0;
