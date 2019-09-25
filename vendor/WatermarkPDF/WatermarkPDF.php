@@ -1,6 +1,6 @@
 <?php
 require(dirname(__DIR__) .'/setasign/fpdf/fpdf.php');
-require_once dirname(__DIR__) .'/setasign/FPDI/fpdi.php';
+require_once dirname(__DIR__) .'/setasign/FPDI/Fpdi.php';
 
 class WatermarkPDF extends FPDI {
 
